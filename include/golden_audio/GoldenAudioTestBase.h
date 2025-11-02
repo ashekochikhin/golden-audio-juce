@@ -183,7 +183,7 @@ protected:
         // Default implementation - override for project-specific parameter access
         auto& params = processor.getParameters();
         for (auto* param : params) {
-            if (param->getName(100) == paramName) {
+            if (param->getName(100) == juce::String(paramName)) {
                 param->setValueNotifyingHost(value);
                 return;
             }
